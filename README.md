@@ -1,4 +1,5 @@
-# gomes_restaurante
+# Gomes Restaurant,
+Projeto inicial para restaurante
 
 A new Flutter project.
 
