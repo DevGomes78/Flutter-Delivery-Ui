@@ -1,5 +1,5 @@
 # Gomes Restaurant,
-App Para delivery 
+Flutter App Para delivery 
 
 ![restaurant](https://user-images.githubusercontent.com/98062365/152695771-272031ca-7bf3-4701-b2da-0ebb5e4802fd.gif)
 
