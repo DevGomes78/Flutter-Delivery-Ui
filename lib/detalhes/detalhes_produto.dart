@@ -21,60 +21,7 @@ class _DetalhesState extends State<Detalhes> {
         title: Text('Detalhes do Prato', style: AppTextStyle.TextFont20),
         centerTitle: true,
       ),
-      body: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.network(
-                  widget.produto.img.toString(),
-                  width: 250,
-                  height: 200,
-                ),
-              ),
-              Text(
-                widget.produto.nome.toString(),
-                style: AppTextStyle.TextFont25,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                widget.produto.descricao.toString(),
-                style: AppTextStyle.TextFont18,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(widget.produto.preco.toString(),
-                  style: AppTextStyle.TextFont25Or),
-              SizedBox(
-                height: 40,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  height: 50,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: Colors.orangeAccent),
-                  child: Expanded(
-                    child: Center(
-                      child: Text(
-                        'Adicionar ao Pedido',
-                        style: AppTextStyle.TextFont20,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      body: buildCard(),
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.black,
         selectedItemColor: Colors.orange,
@@ -96,6 +43,60 @@ class _DetalhesState extends State<Detalhes> {
               title: Text('conta'),
               backgroundColor: Colors.black),
         ],
+      ),
+    );
+  }
+
+  Card buildCard() {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.network(
+                widget.produto.img.toString(),
+                width: 250,
+                height: 200,
+              ),
+            ),
+            Text(
+              widget.produto.nome.toString(),
+              style: AppTextStyle.TextFont25,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              widget.produto.descricao.toString(),
+              style: AppTextStyle.TextFont18,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(widget.produto.preco.toString(),
+                style: AppTextStyle.TextFont25Or),
+            SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                alignment: Alignment.center,
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    color: Colors.orangeAccent),
+                child: Text(
+                  'Adicionar ao Pedido',
+                  style: AppTextStyle.TextFont20,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
